@@ -1,0 +1,16 @@
+# read design
+read_verilog sumator.v
+
+synth -flatten
+
+# high-level synthesis
+proc; opt; fsm; opt; memory; opt
+
+# low-level synthesis
+techmap; opt
+
+splitnets -ports; opt
+
+#zapis do pliku
+write_verilog cmos_gate_adder.v
+show
