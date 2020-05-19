@@ -1,20 +1,21 @@
-# read design
+# wczytanie pliku
 read_verilog sumator.v
 
+#spłaszczanie wykresu - wczytywanie modułów pobocznych
 synth -flatten
 
-# high-level synthesis
+#synteza wysokiego poziomu
 proc; opt; fsm; opt; memory; opt
 
-# low-level synthesis
+
 techmap; opt
 
-# map to target architecture
+# biblioteki gate level
 dfflibmap -liberty cmos_cells.lib
 abc -liberty cmos_cells.lib
 
-# split larger signals
+# ładniejszy zapis portów wejściowych
 splitnets -ports; opt
 
-write_verilog cmos_gate_adder.v
+write_verilog cmos_gl_adder.v
 show
