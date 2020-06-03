@@ -14,8 +14,8 @@ techmap; opt
 dfflibmap -liberty cmos_cells.lib
 abc -liberty cmos_cells.lib
 
-# ładniejszy zapis portów wejściowych
+
 splitnets -ports; opt
 
-write_verilog cmos_gl_adder.v
+write_verilog gl_adder.v
 show

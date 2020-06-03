@@ -1,70 +1,62 @@
 `timescale 1ns / 1ps //time-unit = 1ns, precision = 10ps
-`include "cmos_gate_adder.v"
-	module adder_tb3;
+`include "gl_adder.v"
 
-		// Inputs
+	module yosys_test_bench;
+
 		reg [5:0] x,y;
-
-		// Outputs
 		wire [6:0] s;
-		wire cout;
+		reg [6:0] s_from_data_file;	//suma poprawna - z pliku data.txt
+		integer i;	//licznik petli						
+		integer errors; //licznik bledow
+		integer error_line[4095:0];				
+		reg [18:0] generated_data_vectors [4095:0];	// tablica 4096 (bo tyle mozliwych kombinacji wejsciowych ciągów 0/1) rejestrów 18 bitowych
+						
 
-		parameter size = 4096;				// number of test vectors
-
-		// Variables
-		integer i;							// loop index
-		reg [31:0] errors;					// register for muber of storing errors
-		reg errors_positions[size:1];		// array indicating errors on every position: reg name[size:1]
-		reg [18:0] test_vectors [size-1:0];	// array of registers in order to load all test vectors: reg [18:0] name [size-1:0]
-		reg [6:0] s_exp;					// register to store expected sum (with carry out) from test_vector array
-
-		adder uut (x[0],x[1],x[2],x[3],x[4],x[5],y[0],y[1],y[2],y[3],y[4],y[5],s[0],s[1],s[2],s[3],s[4],s[5],s[6]);				// Instantiate the Unit Under Test
+		adder sumator (x[0],x[1],x[2],x[3],x[4],x[5],y[0],y[1],y[2],y[3],y[4],y[5],s[0],s[1],s[2],s[3],s[4],s[5],s[6]);				
 
 		initial begin
-		    $dumpfile("test.vcd");
-			$dumpvars(1,adder_tb3);
+		 	$dumpfile("yosys_test_bench.vcd");
+			$dumpvars(1,yosys_test_bench);
 			errors = 0;
-			$readmemb("data.txt",test_vectors);
+			$readmemb("data.txt",generated_data_vectors);
 
-			for(i = 0; i < size; i = i + 1) begin
+			for(i = 0; i < 4096; i = i + 1) begin
 
-				{x, y, s_exp} = test_vectors[i];
-				#1;
+				{x, y, s_from_data_file} = generated_data_vectors[i];
+				#1; //1 timestamp delay
 
-				if( s_exp[6:0] != s[6:0] ) begin
+				if( s_from_data_file[6:0] != s[6:0] ) begin
 					errors = errors + 1;
-					$display("___________________ERROR___________________\n");
-					$display("     %b     test_vector ->       %b", x, test_vectors[i][18:13]);
-					$display(" +   %b     test_vector ->   +   %b", y, test_vectors[i][12:7]);
-					$display(" =  %b%b     test_vector ->   =  %b", cout, s, test_vectors[i][6:0]);
-					$display("\ntime: ", $realtime);
-					errors_positions[i+1] = 1;
-				end else begin
-					$display("___________________GOOD___________________\n");
-					$display("     %b     test_vector ->       %b", x, test_vectors[i][18:13]);
-					$display(" +   %b     test_vector ->   +   %b", y, test_vectors[i][12:7]);
-					$display(" =  %b%b     test_vector ->   =  %b", cout, s, test_vectors[i][6:0]);
-					$display("\ntime: ", $realtime,"\n");
+					$display("BLAD! \n");
+					$display("Dane z pliku:     %b  +  %b =  %b", generated_data_vectors[i][18:13], generated_data_vectors[i][12:7] ,generated_data_vectors[i][6:0]);
+					$display("Wynik operacji:   %b  +  %b =  %b\n", x, y, s );
+					error_line[i]=i+1;
+					
+				end 
+				else begin
+					$display("POPRAWNIE! ");
+					$display("Dane z pliku:     %b  +  %b =  %b", generated_data_vectors[i][18:13], generated_data_vectors[i][12:7] ,generated_data_vectors[i][6:0]);
+					$display("Wynik operacji:   %b  +  %b =  %b\n", x, y, s );
 				end
 			end
 
-			$display("_______________FINAL RESULT________________\n");
-			$display("Tested patterns: %26d",size);
-
-			if(errors != 0) begin
-				$display("Errors found: %29d",errors);
-				for(i = 1; i <  size + 1; i = i + 1) begin
-					if(errors_positions[i])
-						$display("Error position(line in test_vector): %6d", i);
+			
+			$display("\nRezultat koncowy:");
+			if(errors == 0) begin
+				$display("Brak bledow!");	
+			end 
+			
+			else begin
+				$display("Liczba znalezionych bledow: %4d",errors);
+				for (i=0;i<4096;i=i+1) begin
+				
+				if(error_line[i]) begin
+				$display("Blad na linii %4d",error_line[i]);
 				end
-			end else begin
-				$display("No error found!");
+				end
 			end
+			$finish;
 		end
-
-		initial begin
-		//	#500 $finish;
-		end
-
+		
 
 	endmodule
