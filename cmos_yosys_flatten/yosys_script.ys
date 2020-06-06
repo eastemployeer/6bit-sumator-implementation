@@ -16,6 +16,6 @@ abc -liberty cmos_cells.lib
 
 
 splitnets -ports; opt
-
+#zapis zsyntezowanego sumatora do pliku gl_adder.v
 write_verilog gl_adder.v
 show
