@@ -11,7 +11,7 @@ integer f;
 
 initial begin
 
-  f = $fopen("output.txt","w");
+  f = $fopen("data.txt","w+");
 
   //@(negedge reset); //Wait for reset to be released
   //@(posedge clk);   //Wait for fisrt clock out of reset
