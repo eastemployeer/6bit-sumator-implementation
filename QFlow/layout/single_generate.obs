@@ -1,0 +1,10 @@
+obstruction -6.4 23 60.8 28 metal1
+obstruction -6.4 -2 60.8 1 metal1
+obstruction -6.4 -2 0.8 28 metal1
+obstruction 48.8 -2 60.8 28 metal1
+obstruction 0.8 23 48.8 28 metal3
+obstruction 0.8 -2 48.8 1 metal3
+obstruction -6.4 1 0.8 23 metal2
+obstruction 48.8 1 60.8 23 metal2
+obstruction -6.4 1 0.8 23 metal4
+obstruction 48.8 1 60.8 23 metal4

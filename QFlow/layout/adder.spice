@@ -1,0 +1,119 @@
+* NGSPICE file created from adder.ext - technology: scmos
+
+* Black-box entry subcircuit for NOR2X1 abstract view
+.subckt NOR2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for FILL abstract view
+.subckt FILL gnd vdd
+.ends
+
+* Black-box entry subcircuit for NAND2X1 abstract view
+.subckt NAND2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for INVX1 abstract view
+.subckt INVX1 A gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for AND2X2 abstract view
+.subckt AND2X2 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for XOR2X1 abstract view
+.subckt XOR2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for BUFX2 abstract view
+.subckt BUFX2 A gnd Y vdd
+.ends
+
+.subckt adder gnd vdd s[6] s[5] s[4] s[3] s[2] s[1] s[0] x[5] x[4] x[3] x[2] x[1]
++ x[0] y[5] y[4] y[3] y[2] y[1] y[0]
+X_49_ _50_/A _50_/B gnd _68_/A vdd NOR2X1
+XSFILL1880x2050 gnd vdd FILL
+XSFILL4520x50 gnd vdd FILL
+X_66_ _86_/A _45_/Y gnd _67_/B vdd NAND2X1
+X_83_ _88_/A _81_/Y gnd _83_/Y vdd NAND2X1
+X_48_ x[3] gnd _50_/B vdd INVX1
+XSFILL1720x2050 gnd vdd FILL
+XSFILL4840x1050 gnd vdd FILL
+X_65_ _44_/Y gnd _65_/Y vdd INVX1
+X_82_ _82_/A gnd _84_/A vdd INVX1
+X_81_ _79_/B _55_/Y gnd _81_/Y vdd AND2X2
+X_47_ y[3] gnd _50_/A vdd INVX1
+X_63_ _85_/A _40_/Y gnd _64_/B vdd NAND2X1
+X_64_ _62_/Y _64_/B gnd _86_/A vdd NAND2X1
+X_80_ _78_/Y _79_/Y gnd _82_/A vdd NAND2X1
+XFILL5880x2050 gnd vdd FILL
+X_46_ y[2] x[2] gnd _46_/Y vdd XOR2X1
+X_62_ _39_/Y gnd _62_/Y vdd INVX1
+X_29_ _29_/A gnd s[3] vdd BUFX2
+X_28_ _86_/Y gnd s[2] vdd BUFX2
+X_45_ _42_/Y _43_/Y gnd _45_/Y vdd NAND2X1
+X_44_ _42_/Y _43_/Y gnd _44_/Y vdd NOR2X1
+X_61_ y[5] x[5] gnd _89_/B vdd XOR2X1
+X_26_ _36_/Y gnd s[0] vdd BUFX2
+X_43_ x[2] gnd _43_/Y vdd INVX1
+X_27_ _85_/Y gnd s[1] vdd BUFX2
+X_60_ _60_/A _60_/B gnd _79_/B vdd NAND2X1
+X_42_ y[2] gnd _42_/Y vdd INVX1
+XFILL5800x50 gnd vdd FILL
+X_41_ y[1] x[1] gnd _41_/Y vdd XOR2X1
+X_40_ _40_/A _40_/B gnd _40_/Y vdd NAND2X1
+XSFILL1800x2050 gnd vdd FILL
+XSFILL4920x1050 gnd vdd FILL
+XSFILL4600x50 gnd vdd FILL
+XSFILL1880x50 gnd vdd FILL
+X_79_ _75_/A _79_/B gnd _79_/Y vdd NAND2X1
+X_78_ _59_/Y gnd _78_/Y vdd INVX1
+X_77_ _77_/A _76_/Y gnd _89_/A vdd NAND2X1
+X_76_ _88_/A _55_/Y gnd _76_/Y vdd NAND2X1
+XSFILL1640x1050 gnd vdd FILL
+X_75_ _75_/A gnd _77_/A vdd INVX1
+X_59_ _60_/A _60_/B gnd _59_/Y vdd NOR2X1
+X_58_ x[5] gnd _60_/B vdd INVX1
+X_74_ _72_/Y _74_/B gnd _88_/A vdd NAND2X1
+X_57_ y[5] gnd _60_/A vdd INVX1
+X_56_ y[4] x[4] gnd _88_/B vdd XOR2X1
+X_73_ _86_/A _71_/Y gnd _74_/B vdd NAND2X1
+X_39_ _40_/A _40_/B gnd _39_/Y vdd NOR2X1
+XSFILL5080x2050 gnd vdd FILL
+X_38_ x[1] gnd _40_/B vdd INVX1
+X_72_ _70_/Y gnd _72_/Y vdd INVX1
+X_55_ _52_/Y _53_/Y gnd _55_/Y vdd NAND2X1
+X_71_ _50_/Y _45_/Y gnd _71_/Y vdd AND2X2
+X_37_ y[1] gnd _40_/A vdd INVX1
+X_54_ _52_/Y _53_/Y gnd _75_/A vdd NOR2X1
+XSFILL4920x2050 gnd vdd FILL
+X_53_ x[4] gnd _53_/Y vdd INVX1
+X_36_ y[0] x[0] gnd _36_/Y vdd XOR2X1
+X_70_ _68_/Y _70_/B gnd _70_/Y vdd NAND2X1
+X_52_ y[4] gnd _52_/Y vdd INVX1
+X_35_ _33_/Y _35_/B gnd _85_/A vdd NOR2X1
+XSFILL1960x50 gnd vdd FILL
+X_34_ x[0] gnd _35_/B vdd INVX1
+X_51_ y[3] x[3] gnd _87_/B vdd XOR2X1
+XSFILL1720x1050 gnd vdd FILL
+X_50_ _50_/A _50_/B gnd _50_/Y vdd NAND2X1
+X_33_ y[0] gnd _33_/Y vdd INVX1
+X_32_ _84_/Y gnd s[6] vdd BUFX2
+XFILL5880x50 gnd vdd FILL
+X_31_ _31_/A gnd s[5] vdd BUFX2
+X_30_ _30_/A gnd s[4] vdd BUFX2
+XSFILL4760x1050 gnd vdd FILL
+XSFILL1800x50 gnd vdd FILL
+X_89_ _89_/A _89_/B gnd _31_/A vdd XOR2X1
+XSFILL5000x2050 gnd vdd FILL
+X_88_ _88_/A _88_/B gnd _30_/A vdd XOR2X1
+XSFILL4680x50 gnd vdd FILL
+X_87_ _87_/A _87_/B gnd _29_/A vdd XOR2X1
+X_86_ _86_/A _46_/Y gnd _86_/Y vdd XOR2X1
+X_69_ _44_/Y _50_/Y gnd _70_/B vdd NAND2X1
+X_85_ _85_/A _41_/Y gnd _85_/Y vdd XOR2X1
+X_68_ _68_/A gnd _68_/Y vdd INVX1
+XSFILL1800x1050 gnd vdd FILL
+X_67_ _65_/Y _67_/B gnd _87_/A vdd NAND2X1
+X_84_ _84_/A _83_/Y gnd _84_/Y vdd NAND2X1
+.ends
+

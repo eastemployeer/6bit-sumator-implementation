@@ -1,0 +1,147 @@
+Qflow static timing analysis logfile created on czw, 4 cze 2020, 18:43:23 CEST
+Running vesta static timing analysis
+vesta --long adder.rtlnopwr.v /usr/local/share/qflow/tech/osu018/osu018_stdcells.lib
+----------------------------------------------
+Vesta static timing analysis tool
+for qflow 1.4.80
+(c) 2013-2018 Tim Edwards, Open Circuit Design
+----------------------------------------------
+
+Parsing library "osu018_stdcells"
+End of library at line 6141
+Lib read /usr/local/share/qflow/tech/osu018/osu018_stdcells.lib:  Processed 6142 lines.
+Parsing module "adder"
+Verilog netlist read:  Processed 494 lines.
+Number of paths analyzed:  0
+
+Top 0 maximum delay paths:
+-----------------------------------------
+
+Number of paths analyzed:  0
+
+Top 0 minimum delay paths:
+Design meets minimum hold timing.
+-----------------------------------------
+
+Number of paths analyzed:  7
+
+Top 7 maximum delay paths:
+Path input pin y[0] to output pin s[5] delay 977.668 ps
+      0.0 ps        y[0]:        -> _33_/A
+     39.3 ps         _0_: _33_/Y -> _35_/A
+    150.6 ps      \G1.g : _35_/Y -> _63_/A
+    238.0 ps        _13_: _63_/Y -> _64_/B
+    373.9 ps    \P1.Gij : _64_/Y -> _73_/A
+    470.5 ps        _19_: _73_/Y -> _74_/B
+    608.4 ps  \P3_1.Gij : _74_/Y -> _76_/A
+    705.2 ps        _21_: _76_/Y -> _77_/B
+    800.5 ps    \P4.Gij : _77_/Y -> _89_/A
+    896.9 ps      \S5.s : _89_/Y -> _31_/A
+    977.7 ps        s[5]: _31_/Y -> s[5]
+
+Path input pin y[0] to output pin s[6] delay 839.771 ps
+      0.0 ps        y[0]:        -> _33_/A
+     39.3 ps         _0_: _33_/Y -> _35_/A
+    150.6 ps      \G1.g : _35_/Y -> _63_/A
+    238.0 ps        _13_: _63_/Y -> _64_/B
+    373.9 ps    \P1.Gij : _64_/Y -> _73_/A
+    470.5 ps        _19_: _73_/Y -> _74_/B
+    608.4 ps  \P3_1.Gij : _74_/Y -> _83_/A
+    705.2 ps        _25_: _83_/Y -> _84_/B
+    762.6 ps  \P5_1.Gij : _84_/Y -> _32_/A
+    839.8 ps        s[6]: _32_/Y -> s[6]
+
+Path input pin y[0] to output pin s[4] delay 792.999 ps
+      0.0 ps        y[0]:        -> _33_/A
+     39.3 ps         _0_: _33_/Y -> _35_/A
+    150.6 ps      \G1.g : _35_/Y -> _63_/A
+    238.0 ps        _13_: _63_/Y -> _64_/B
+    373.9 ps    \P1.Gij : _64_/Y -> _73_/A
+    470.5 ps        _19_: _73_/Y -> _74_/B
+    608.4 ps  \P3_1.Gij : _74_/Y -> _88_/A
+    712.1 ps      \S4.s : _88_/Y -> _30_/A
+    793.0 ps        s[4]: _30_/Y -> s[4]
+
+Path input pin y[0] to output pin s[3] delay 742.943 ps
+      0.0 ps      y[0]:        -> _33_/A
+     39.3 ps       _0_: _33_/Y -> _35_/A
+    150.6 ps    \G1.g : _35_/Y -> _63_/A
+    238.0 ps      _13_: _63_/Y -> _64_/B
+    373.9 ps  \P1.Gij : _64_/Y -> _66_/A
+    470.5 ps      _15_: _66_/Y -> _67_/B
+    565.8 ps  \P2.Gij : _67_/Y -> _87_/A
+    662.1 ps    \S3.s : _87_/Y -> _29_/A
+    742.9 ps      s[3]: _29_/Y -> s[3]
+
+Path input pin y[0] to output pin s[2] delay 558.408 ps
+      0.0 ps      y[0]:        -> _33_/A
+     39.3 ps       _0_: _33_/Y -> _35_/A
+    150.6 ps    \G1.g : _35_/Y -> _63_/A
+    238.0 ps      _13_: _63_/Y -> _64_/B
+    373.9 ps  \P1.Gij : _64_/Y -> _86_/A
+    477.5 ps    \S2.s : _86_/Y -> _28_/A
+    558.4 ps      s[2]: _28_/Y -> s[2]
+
+Path input pin x[1] to output pin s[1] delay 333.705 ps
+      0.0 ps    x[1]:        -> _41_/B
+    141.6 ps  \G2.h : _41_/Y -> _85_/B
+    252.9 ps  \S1.s : _85_/Y -> _27_/A
+    333.7 ps    s[1]: _27_/Y -> s[1]
+
+Path input pin x[0] to output pin s[0] delay 180.62 ps
+      0.0 ps    x[0]:        -> _36_/B
+     99.2 ps  \G1.h : _36_/Y -> _26_/A
+    180.6 ps    s[0]: _26_/Y -> s[0]
+
+-----------------------------------------
+
+Number of paths analyzed:  7
+
+Top 7 minimum delay paths:
+Path input pin y[0] to output pin s[0] delay 142.2 ps
+      0.0 ps    y[0]:        -> _36_/A
+     73.6 ps  \G1.h : _36_/Y -> _26_/A
+    142.2 ps    s[0]: _26_/Y -> s[0]
+
+Path input pin y[5] to output pin s[5] delay 275.359 ps
+      0.0 ps    y[5]:        -> _61_/A
+    103.4 ps  \G6.h : _61_/Y -> _89_/B
+    207.0 ps  \S5.s : _89_/Y -> _31_/A
+    275.4 ps    s[5]: _31_/Y -> s[5]
+
+Path input pin y[4] to output pin s[4] delay 275.359 ps
+      0.0 ps    y[4]:        -> _56_/A
+    103.4 ps  \G5.h : _56_/Y -> _88_/B
+    207.0 ps  \S4.s : _88_/Y -> _30_/A
+    275.4 ps    s[4]: _30_/Y -> s[4]
+
+Path input pin y[3] to output pin s[3] delay 275.359 ps
+      0.0 ps    y[3]:        -> _51_/A
+    103.4 ps  \G4.h : _51_/Y -> _87_/B
+    207.0 ps  \S3.s : _87_/Y -> _29_/A
+    275.4 ps    s[3]: _29_/Y -> s[3]
+
+Path input pin y[2] to output pin s[2] delay 275.359 ps
+      0.0 ps    y[2]:        -> _46_/A
+    103.4 ps  \G3.h : _46_/Y -> _86_/B
+    207.0 ps  \S2.s : _86_/Y -> _28_/A
+    275.4 ps    s[2]: _28_/Y -> s[2]
+
+Path input pin y[1] to output pin s[1] delay 275.359 ps
+      0.0 ps    y[1]:        -> _41_/A
+    103.4 ps  \G2.h : _41_/Y -> _85_/B
+    207.0 ps  \S1.s : _85_/Y -> _27_/A
+    275.4 ps    s[1]: _27_/Y -> s[1]
+
+Path input pin x[5] to output pin s[6] delay 345.355 ps
+      0.0 ps        x[5]:        -> _58_/A
+     59.5 ps        _11_: _58_/Y -> _59_/B
+    107.9 ps      \G6.g : _59_/Y -> _78_/A
+    155.2 ps        _22_: _78_/Y -> _80_/A
+    195.1 ps    \P5.Gij : _80_/Y -> _82_/A
+    239.7 ps        _24_: _82_/Y -> _84_/A
+    279.5 ps  \P5_1.Gij : _84_/Y -> _32_/A
+    345.4 ps        s[6]: _32_/Y -> s[6]
+
+-----------------------------------------
+

@@ -1,0 +1,156 @@
+Qflow static timing analysis logfile created on czw, 4 cze 2020, 18:43:25 CEST
+Converting qrouter output to vesta delay format
+Running rc2dly -r adder.rc -l /usr/local/share/qflow/tech/osu018/osu018_stdcells.lib -V /home/radoslaw/Desktop/Projekt/verilogproject-master/sumator/synthesis/adder.rtl.v
+-d adder.dly
+Converting qrouter output to SPEF delay format
+Running rc2dly -D : -r adder.rc -l /usr/local/share/qflow/tech/osu018/osu018_stdcells.lib -V /home/radoslaw/Desktop/Projekt/verilogproject-master/sumator/synthesis/adder.rtl.v
+-d adder.spef
+Converting qrouter output to SDF delay format
+Running rc2dly -r adder.rc -l /usr/local/share/qflow/tech/osu018/osu018_stdcells.lib -V /home/radoslaw/Desktop/Projekt/verilogproject-master/sumator/synthesis/adder.rtl.v
+-d adder.sdf
+Running vesta static timing analysis with back-annotated extracted wire delays
+vesta -c -d adder.dly --long adder.rtlnopwr.v /usr/local/share/qflow/tech/osu018/osu018_stdcells.lib
+----------------------------------------------
+Vesta static timing analysis tool
+for qflow 1.4.80
+(c) 2013-2018 Tim Edwards, Open Circuit Design
+----------------------------------------------
+
+Parsing library "osu018_stdcells"
+End of library at line 6141
+Lib read /usr/local/share/qflow/tech/osu018/osu018_stdcells.lib:  Processed 6142 lines.
+Parsing module "adder"
+Verilog netlist read:  Processed 494 lines.
+Number of paths analyzed:  0
+
+Top 0 maximum delay paths:
+-----------------------------------------
+
+Number of paths analyzed:  0
+
+Top 0 minimum delay paths:
+Design meets minimum hold timing.
+-----------------------------------------
+
+Number of paths analyzed:  7
+
+Top 7 maximum delay paths:
+Path input pin y[0] to output pin s[5] delay 1005.15 ps
+      0.0 ps        y[0]:        -> _33_/A
+     39.9 ps         _0_: _33_/Y -> _35_/A
+    153.1 ps      \G1.g : _35_/Y -> _63_/A
+    242.1 ps        _13_: _63_/Y -> _64_/B
+    382.3 ps    \P1.Gij : _64_/Y -> _73_/A
+    483.2 ps        _19_: _73_/Y -> _74_/B
+    628.7 ps  \P3_1.Gij : _74_/Y -> _76_/A
+    729.2 ps        _21_: _76_/Y -> _77_/B
+    826.5 ps    \P4.Gij : _77_/Y -> _89_/A
+    923.8 ps      \S5.s : _89_/Y -> _31_/A
+   1005.2 ps        s[5]: _31_/Y -> s[5]
+
+Path input pin y[0] to output pin s[6] delay 868.087 ps
+      0.0 ps        y[0]:        -> _33_/A
+     39.9 ps         _0_: _33_/Y -> _35_/A
+    153.1 ps      \G1.g : _35_/Y -> _63_/A
+    242.1 ps        _13_: _63_/Y -> _64_/B
+    382.3 ps    \P1.Gij : _64_/Y -> _73_/A
+    483.2 ps        _19_: _73_/Y -> _74_/B
+    628.7 ps  \P3_1.Gij : _74_/Y -> _83_/A
+    728.8 ps        _25_: _83_/Y -> _84_/B
+    789.5 ps  \P5_1.Gij : _84_/Y -> _32_/A
+    868.1 ps        s[6]: _32_/Y -> s[6]
+
+Path input pin y[0] to output pin s[4] delay 816.455 ps
+      0.0 ps        y[0]:        -> _33_/A
+     39.9 ps         _0_: _33_/Y -> _35_/A
+    153.1 ps      \G1.g : _35_/Y -> _63_/A
+    242.1 ps        _13_: _63_/Y -> _64_/B
+    382.3 ps    \P1.Gij : _64_/Y -> _73_/A
+    483.2 ps        _19_: _73_/Y -> _74_/B
+    628.7 ps  \P3_1.Gij : _74_/Y -> _88_/A
+    734.9 ps      \S4.s : _88_/Y -> _30_/A
+    816.5 ps        s[4]: _30_/Y -> s[4]
+
+Path input pin y[0] to output pin s[3] delay 759.331 ps
+      0.0 ps      y[0]:        -> _33_/A
+     39.9 ps       _0_: _33_/Y -> _35_/A
+    153.1 ps    \G1.g : _35_/Y -> _63_/A
+    242.1 ps      _13_: _63_/Y -> _64_/B
+    382.3 ps  \P1.Gij : _64_/Y -> _66_/A
+    482.4 ps      _15_: _66_/Y -> _67_/B
+    579.7 ps  \P2.Gij : _67_/Y -> _87_/A
+    677.7 ps    \S3.s : _87_/Y -> _29_/A
+    759.3 ps      s[3]: _29_/Y -> s[3]
+
+Path input pin y[0] to output pin s[2] delay 570.002 ps
+      0.0 ps      y[0]:        -> _33_/A
+     39.9 ps       _0_: _33_/Y -> _35_/A
+    153.1 ps    \G1.g : _35_/Y -> _63_/A
+    242.1 ps      _13_: _63_/Y -> _64_/B
+    382.3 ps  \P1.Gij : _64_/Y -> _86_/A
+    488.2 ps    \S2.s : _86_/Y -> _28_/A
+    570.0 ps      s[2]: _28_/Y -> s[2]
+
+Path input pin x[1] to output pin s[1] delay 336.762 ps
+      0.0 ps    x[1]:        -> _41_/B
+    143.0 ps  \G2.h : _41_/Y -> _85_/B
+    255.3 ps  \S1.s : _85_/Y -> _27_/A
+    336.8 ps    s[1]: _27_/Y -> s[1]
+
+Path input pin x[0] to output pin s[0] delay 184.989 ps
+      0.0 ps    x[0]:        -> _36_/B
+    102.6 ps  \G1.h : _36_/Y -> _26_/A
+    185.0 ps    s[0]: _26_/Y -> s[0]
+
+-----------------------------------------
+
+Number of paths analyzed:  7
+
+Top 7 minimum delay paths:
+Path input pin y[0] to output pin s[0] delay 144.891 ps
+      0.0 ps    y[0]:        -> _36_/A
+     75.4 ps  \G1.h : _36_/Y -> _26_/A
+    144.9 ps    s[0]: _26_/Y -> s[0]
+
+Path input pin y[5] to output pin s[5] delay 276.899 ps
+      0.0 ps    y[5]:        -> _61_/A
+    103.8 ps  \G6.h : _61_/Y -> _89_/B
+    208.2 ps  \S5.s : _89_/Y -> _31_/A
+    276.9 ps    s[5]: _31_/Y -> s[5]
+
+Path input pin y[4] to output pin s[4] delay 277.543 ps
+      0.0 ps    y[4]:        -> _56_/A
+    104.0 ps  \G5.h : _56_/Y -> _88_/B
+    208.7 ps  \S4.s : _88_/Y -> _30_/A
+    277.5 ps    s[4]: _30_/Y -> s[4]
+
+Path input pin y[1] to output pin s[1] delay 277.731 ps
+      0.0 ps    y[1]:        -> _41_/A
+    104.4 ps  \G2.h : _41_/Y -> _85_/B
+    208.9 ps  \S1.s : _85_/Y -> _27_/A
+    277.7 ps    s[1]: _27_/Y -> s[1]
+
+Path input pin y[2] to output pin s[2] delay 278.43 ps
+      0.0 ps    y[2]:        -> _46_/A
+    104.3 ps  \G3.h : _46_/Y -> _86_/B
+    209.4 ps  \S2.s : _86_/Y -> _28_/A
+    278.4 ps    s[2]: _28_/Y -> s[2]
+
+Path input pin y[3] to output pin s[3] delay 278.436 ps
+      0.0 ps    y[3]:        -> _51_/A
+    104.5 ps  \G4.h : _51_/Y -> _87_/B
+    209.5 ps  \S3.s : _87_/Y -> _29_/A
+    278.4 ps    s[3]: _29_/Y -> s[3]
+
+Path input pin x[5] to output pin s[6] delay 355.152 ps
+      0.0 ps        x[5]:        -> _58_/A
+     61.3 ps        _11_: _58_/Y -> _59_/B
+    112.6 ps      \G6.g : _59_/Y -> _78_/A
+    160.9 ps        _22_: _78_/Y -> _80_/A
+    201.4 ps    \P5.Gij : _80_/Y -> _82_/A
+    246.3 ps        _24_: _82_/Y -> _84_/A
+    288.5 ps  \P5_1.Gij : _84_/Y -> _32_/A
+    355.2 ps        s[6]: _32_/Y -> s[6]
+
+-----------------------------------------
+
