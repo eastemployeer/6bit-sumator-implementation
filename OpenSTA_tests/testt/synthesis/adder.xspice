@@ -1,0 +1,120 @@
+* XSpice netlist created from SPICE and liberty sources by spi2xspice.py
+*SPICE netlist created from verilog structural netlist module adder by vlog2Spice (qflow)
+** Start of included library /usr/local/share/qflow/tech/osu018/osu018_stdcells.sp
+** End of included library /usr/local/share/qflow/tech/osu018/osu018_stdcells.sp
+.subckt adder a_vdd a_gnd a_s_0_ a_s_1_ a_s_2_ a_s_3_ a_s_4_ a_s_5_ a_s_6_ a_x_0_ a_x_1_ a_x_2_ a_x_3_ a_x_4_ a_x_5_ a_y_0_ a_y_1_ a_y_2_ a_y_3_ a_y_4_ a_y_5_
+A_26_ [\G1.h\] s_0_ d_lut_BUFX2
+A_27_ [\S1.s\] s_1_ d_lut_BUFX2
+A_28_ [\S2.s\] s_2_ d_lut_BUFX2
+A_29_ [\S3.s\] s_3_ d_lut_BUFX2
+A_30_ [\S4.s\] s_4_ d_lut_BUFX2
+A_31_ [\S5.s\] s_5_ d_lut_BUFX2
+A_32_ [\P5_1.Gij\] s_6_ d_lut_BUFX2
+A_33_ [y_0_] _0_ d_lut_INVX1
+A_34_ [x_0_] _1_ d_lut_INVX1
+A_35_ [_0_ _1_] \G1.g\ d_lut_NOR2X1
+A_36_ [y_0_ x_0_] \G1.h\ d_lut_XOR2X1
+A_37_ [y_1_] _2_ d_lut_INVX1
+A_38_ [x_1_] _3_ d_lut_INVX1
+A_39_ [_2_ _3_] \G2.g\ d_lut_NOR2X1
+A_40_ [_2_ _3_] \G2.p\ d_lut_NAND2X1
+A_41_ [y_1_ x_1_] \G2.h\ d_lut_XOR2X1
+A_42_ [y_2_] _4_ d_lut_INVX1
+A_43_ [x_2_] _5_ d_lut_INVX1
+A_44_ [_4_ _5_] \G3.g\ d_lut_NOR2X1
+A_45_ [_4_ _5_] \G3.p\ d_lut_NAND2X1
+A_46_ [y_2_ x_2_] \G3.h\ d_lut_XOR2X1
+A_47_ [y_3_] _6_ d_lut_INVX1
+A_48_ [x_3_] _7_ d_lut_INVX1
+A_49_ [_6_ _7_] \G4.g\ d_lut_NOR2X1
+A_50_ [_6_ _7_] \G4.p\ d_lut_NAND2X1
+A_51_ [y_3_ x_3_] \G4.h\ d_lut_XOR2X1
+A_52_ [y_4_] _8_ d_lut_INVX1
+A_53_ [x_4_] _9_ d_lut_INVX1
+A_54_ [_8_ _9_] \G5.g\ d_lut_NOR2X1
+A_55_ [_8_ _9_] \G5.p\ d_lut_NAND2X1
+A_56_ [y_4_ x_4_] \G5.h\ d_lut_XOR2X1
+A_57_ [y_5_] _10_ d_lut_INVX1
+A_58_ [x_5_] _11_ d_lut_INVX1
+A_59_ [_10_ _11_] \G6.g\ d_lut_NOR2X1
+A_60_ [_10_ _11_] \G6.p\ d_lut_NAND2X1
+A_61_ [y_5_ x_5_] \G6.h\ d_lut_XOR2X1
+A_62_ [\G2.g\] _12_ d_lut_INVX1
+A_63_ [\G1.g\ \G2.p\] _13_ d_lut_NAND2X1
+A_64_ [_12_ _13_] \P1.Gij\ d_lut_NAND2X1
+A_65_ [\G3.g\] _14_ d_lut_INVX1
+A_66_ [\P1.Gij\ \G3.p\] _15_ d_lut_NAND2X1
+A_67_ [_14_ _15_] \P2.Gij\ d_lut_NAND2X1
+A_68_ [\G4.g\] _16_ d_lut_INVX1
+A_69_ [\G3.g\ \G4.p\] _17_ d_lut_NAND2X1
+A_70_ [_16_ _17_] \P3.Gij\ d_lut_NAND2X1
+A_71_ [\G4.p\ \G3.p\] \P3.Pij\ d_lut_AND2X2
+A_72_ [\P3.Gij\] _18_ d_lut_INVX1
+A_73_ [\P1.Gij\ \P3.Pij\] _19_ d_lut_NAND2X1
+A_74_ [_18_ _19_] \P3_1.Gij\ d_lut_NAND2X1
+A_75_ [\G5.g\] _20_ d_lut_INVX1
+A_76_ [\P3_1.Gij\ \G5.p\] _21_ d_lut_NAND2X1
+A_77_ [_20_ _21_] \P4.Gij\ d_lut_NAND2X1
+A_78_ [\G6.g\] _22_ d_lut_INVX1
+A_79_ [\G5.g\ \G6.p\] _23_ d_lut_NAND2X1
+A_80_ [_22_ _23_] \P5.Gij\ d_lut_NAND2X1
+A_81_ [\G6.p\ \G5.p\] \P5.Pij\ d_lut_AND2X2
+A_82_ [\P5.Gij\] _24_ d_lut_INVX1
+A_83_ [\P3_1.Gij\ \P5.Pij\] _25_ d_lut_NAND2X1
+A_84_ [_24_ _25_] \P5_1.Gij\ d_lut_NAND2X1
+A_85_ [\G1.g\ \G2.h\] \S1.s\ d_lut_XOR2X1
+A_86_ [\P1.Gij\ \G3.h\] \S2.s\ d_lut_XOR2X1
+A_87_ [\P2.Gij\ \G4.h\] \S3.s\ d_lut_XOR2X1
+A_88_ [\P3_1.Gij\ \G5.h\] \S4.s\ d_lut_XOR2X1
+A_89_ [\P4.Gij\ \G6.h\] \S5.s\ d_lut_XOR2X1
+
+.model todig_1v8 adc_bridge(in_high=1.2 in_low=0.6 rise_delay=1n fall_delay=1n)
+.model toana_1v8 dac_bridge(out_high=1.8 out_low=0)
+
+.model ddflop d_dff(ic=0 rise_delay=100p fall_delay=100p)
+.model dzero d_pulldown(load=500f)
+.model done d_pullup(load=500f)
+
+AA2D1 [a_vdd] [vdd] todig_1v8
+AA2D2 [a_gnd] [gnd] todig_1v8
+AD2A1 [s_0_] [a_s_0_] toana_1v8
+AD2A2 [s_1_] [a_s_1_] toana_1v8
+AD2A3 [s_2_] [a_s_2_] toana_1v8
+AD2A4 [s_3_] [a_s_3_] toana_1v8
+AD2A5 [s_4_] [a_s_4_] toana_1v8
+AD2A6 [s_5_] [a_s_5_] toana_1v8
+AD2A7 [s_6_] [a_s_6_] toana_1v8
+AA2D3 [a_x_0_] [x_0_] todig_1v8
+AA2D4 [a_x_1_] [x_1_] todig_1v8
+AA2D5 [a_x_2_] [x_2_] todig_1v8
+AA2D6 [a_x_3_] [x_3_] todig_1v8
+AA2D7 [a_x_4_] [x_4_] todig_1v8
+AA2D8 [a_x_5_] [x_5_] todig_1v8
+AA2D9 [a_y_0_] [y_0_] todig_1v8
+AA2D10 [a_y_1_] [y_1_] todig_1v8
+AA2D11 [a_y_2_] [y_2_] todig_1v8
+AA2D12 [a_y_3_] [y_3_] todig_1v8
+AA2D13 [a_y_4_] [y_4_] todig_1v8
+AA2D14 [a_y_5_] [y_5_] todig_1v8
+
+.ends
+
+* BUFX2 A
+.model d_lut_BUFX2 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "01")
+* INVX1 (!A)
+.model d_lut_INVX1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "10")
+* NOR2X1 (!(A+B))
+.model d_lut_NOR2X1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "1000")
+* XOR2X1 (A^B)
+.model d_lut_XOR2X1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "0110")
+* NAND2X1 (!(A B))
+.model d_lut_NAND2X1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "1110")
+* AND2X2 (A B)
+.model d_lut_AND2X2 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "0001")
+.end

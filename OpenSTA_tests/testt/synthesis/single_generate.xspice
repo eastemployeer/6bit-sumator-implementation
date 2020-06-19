@@ -1,0 +1,47 @@
+* XSpice netlist created from SPICE and liberty sources by spi2xspice.py
+*SPICE netlist created from verilog structural netlist module single_generate by vlog2Spice (qflow)
+** Start of included library /usr/local/share/qflow/tech/osu018/osu018_stdcells.sp
+** End of included library /usr/local/share/qflow/tech/osu018/osu018_stdcells.sp
+.subckt single_generate a_vdd a_gnd a_g a_h a_p a_x a_y
+A_10_ [_2_] g d_lut_BUFX2
+A_11_ [_3_] h d_lut_BUFX2
+A_12_ [_4_] p d_lut_BUFX2
+A_5_ [y] _0_ d_lut_INVX1
+A_6_ [x] _1_ d_lut_INVX1
+A_7_ [_0_ _1_] _2_ d_lut_NOR2X1
+A_8_ [_0_ _1_] _4_ d_lut_NAND2X1
+A_9_ [y x] _3_ d_lut_XOR2X1
+
+.model todig_1v8 adc_bridge(in_high=1.2 in_low=0.6 rise_delay=1n fall_delay=1n)
+.model toana_1v8 dac_bridge(out_high=1.8 out_low=0)
+
+.model ddflop d_dff(ic=0 rise_delay=100p fall_delay=100p)
+.model dzero d_pulldown(load=500f)
+.model done d_pullup(load=500f)
+
+AA2D1 [a_vdd] [vdd] todig_1v8
+AA2D2 [a_gnd] [gnd] todig_1v8
+AD2A1 [g] [a_g] toana_1v8
+AD2A2 [h] [a_h] toana_1v8
+AD2A3 [p] [a_p] toana_1v8
+AA2D3 [a_x] [x] todig_1v8
+AA2D4 [a_y] [y] todig_1v8
+
+.ends
+
+* BUFX2 A
+.model d_lut_BUFX2 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "01")
+* INVX1 (!A)
+.model d_lut_INVX1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "10")
+* NOR2X1 (!(A+B))
+.model d_lut_NOR2X1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "1000")
+* NAND2X1 (!(A B))
+.model d_lut_NAND2X1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "1110")
+* XOR2X1 (A^B)
+.model d_lut_XOR2X1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "0110")
+.end

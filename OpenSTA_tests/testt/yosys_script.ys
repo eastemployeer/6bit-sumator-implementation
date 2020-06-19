@@ -1,0 +1,15 @@
+# wczytanie pliku
+read_verilog sumator.v
+
+#spłaszczanie wykresu - wczytywanie modułów pobocznych
+synth -flatten
+
+# biblioteki gate level
+dfflibmap -liberty example1_slow.lib
+abc -liberty example1_slow.lib
+
+
+
+#zapis zsyntezowanego sumatora do pliku gl_adder.v
+write_verilog gl_adder.v
+show

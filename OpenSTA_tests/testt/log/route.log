@@ -1,0 +1,488 @@
+Qflow route logfile created on pią, 19 cze 2020, 01:43:46 CEST
+qrouter -noc  -s adder.cfg
+Qrouter detail maze router version 1.4.83.T
+Reading LEF data from file /usr/local/share/qflow/tech/osu018/osu018_stdcells.lef.
+LEF Read, Line 191: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 192: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 196: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 197: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 207: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 208: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 212: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 213: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 223: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 224: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 228: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 229: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 239: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 240: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 244: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 245: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 255: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 256: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 260: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 261: NOTE:  Old format VIARULE ignored.
+LEF file:  Defines site core (ignored)
+LEF read: Processed 2941 lines.
+LEF Read: encountered 0 errors and 20 warnings total.
+Vertical route layer at non-minimum pitch 1.6.  Using smaller pitch 0.8, will route on 1-of-2 tracks for layer metal6.
+Reading DEF data from file adder.def.
+Diagnostic: Design name: "adder"
+  Processed 5 vias total.
+  Processed 85 subcell instances total.
+  Processed 21 pins total.
+  Processed 76 nets total (0 fixed).
+  Processed 2 special nets total (4 fixed).
+DEF read: Processed 500 lines.
+Output scale = microns / 100, precision 1
+There are 78 nets in this design.
+*** Running stage1 routing with defaults
+Finished routing net \P1.Gij\
+Nets remaining: 77
+Finished routing net \P3_1.Gij\
+Nets remaining: 76
+Finished routing net y[0]
+Nets remaining: 75
+Finished routing net x[0]
+Nets remaining: 74
+Finished routing net \G1.g\
+Nets remaining: 73
+Finished routing net y[1]
+Nets remaining: 72
+Finished routing net _2_
+Nets remaining: 71
+Finished routing net x[1]
+Nets remaining: 70
+Finished routing net _3_
+Nets remaining: 69
+Finished routing net y[2]
+Nets remaining: 68
+Finished routing net _4_
+Nets remaining: 67
+Finished routing net x[2]
+Nets remaining: 66
+Finished routing net _5_
+Nets remaining: 65
+Finished routing net \G3.g\
+Nets remaining: 64
+Finished routing net \G3.p\
+Nets remaining: 63
+Finished routing net y[3]
+Nets remaining: 62
+Finished routing net _6_
+Nets remaining: 61
+Finished routing net x[3]
+Nets remaining: 60
+Finished routing net _7_
+Nets remaining: 59
+Finished routing net \G4.p\
+Nets remaining: 58
+Finished routing net y[4]
+Nets remaining: 57
+Finished routing net _8_
+Nets remaining: 56
+Finished routing net x[4]
+Nets remaining: 55
+Finished routing net _9_
+Nets remaining: 54
+Finished routing net \G5.g\
+Nets remaining: 53
+Finished routing net \G5.p\
+Nets remaining: 52
+Finished routing net y[5]
+Nets remaining: 51
+Finished routing net _10_
+Nets remaining: 50
+Finished routing net x[5]
+Nets remaining: 49
+Finished routing net _11_
+Nets remaining: 48
+Finished routing net \G6.p\
+Nets remaining: 47
+Finished routing net \G1.h\
+Nets remaining: 46
+Finished routing net s[0]
+Nets remaining: 45
+Finished routing net \S1.s\
+Nets remaining: 44
+Finished routing net s[1]
+Nets remaining: 43
+Finished routing net \S2.s\
+Nets remaining: 42
+Finished routing net s[2]
+Nets remaining: 41
+Finished routing net \S3.s\
+Nets remaining: 40
+Finished routing net s[3]
+Nets remaining: 39
+Finished routing net \S4.s\
+Nets remaining: 38
+Finished routing net s[4]
+Nets remaining: 37
+Finished routing net \S5.s\
+Nets remaining: 36
+Finished routing net s[5]
+Nets remaining: 35
+Finished routing net \P5_1.Gij\
+Nets remaining: 34
+Finished routing net s[6]
+Nets remaining: 33
+Finished routing net _0_
+Nets remaining: 32
+Finished routing net _1_
+Nets remaining: 31
+Finished routing net \G2.g\
+Nets remaining: 30
+Finished routing net \G2.p\
+Nets remaining: 29
+Finished routing net \G2.h\
+Nets remaining: 28
+Finished routing net \G3.h\
+Nets remaining: 27
+Finished routing net \G4.g\
+Nets remaining: 26
+Finished routing net \G4.h\
+Nets remaining: 25
+Finished routing net \G5.h\
+Nets remaining: 24
+Finished routing net \G6.g\
+Nets remaining: 23
+Finished routing net \G6.h\
+Nets remaining: 22
+Finished routing net _12_
+Nets remaining: 21
+Finished routing net _13_
+Nets remaining: 20
+Finished routing net _14_
+Nets remaining: 19
+Finished routing net _15_
+Nets remaining: 18
+Finished routing net \P2.Gij\
+Nets remaining: 17
+Finished routing net _16_
+Nets remaining: 16
+Finished routing net _17_
+Nets remaining: 15
+Finished routing net \P3.Gij\
+Nets remaining: 14
+Finished routing net \P3.Pij\
+Nets remaining: 13
+Finished routing net _18_
+Nets remaining: 12
+Finished routing net _19_
+Nets remaining: 11
+Finished routing net _20_
+Nets remaining: 10
+Finished routing net _21_
+Nets remaining: 9
+Finished routing net \P4.Gij\
+Nets remaining: 8
+Finished routing net _22_
+Nets remaining: 7
+Finished routing net _23_
+Nets remaining: 6
+Finished routing net \P5.Gij\
+Nets remaining: 5
+Finished routing net \P5.Pij\
+Nets remaining: 4
+Finished routing net _24_
+Nets remaining: 3
+Finished routing net _25_
+Nets remaining: 2
+
+----------------------------------------------
+Progress: Stage 1 total routes completed: 109
+No failed routes!
+----------------------------------------------
+*** Running stage3 routing with defaults, 1st round
+Finished routing net \P1.Gij\
+Nets remaining: 77
+Finished routing net \P3_1.Gij\
+Nets remaining: 76
+Finished routing net y[0]
+Nets remaining: 75
+Finished routing net x[0]
+Nets remaining: 74
+Finished routing net \G1.g\
+Nets remaining: 73
+Finished routing net y[1]
+Nets remaining: 72
+Finished routing net _2_
+Nets remaining: 71
+Finished routing net x[1]
+Nets remaining: 70
+Finished routing net _3_
+Nets remaining: 69
+Finished routing net y[2]
+Nets remaining: 68
+Finished routing net _4_
+Nets remaining: 67
+Keeping route for net x[2]
+Finished routing net _5_
+Nets remaining: 65
+Keeping route for net \G3.g\
+Finished routing net \G3.p\
+Nets remaining: 63
+Finished routing net y[3]
+Nets remaining: 62
+Finished routing net _6_
+Nets remaining: 61
+Finished routing net x[3]
+Nets remaining: 60
+Keeping route for net _7_
+Finished routing net \G4.p\
+Nets remaining: 58
+Finished routing net y[4]
+Nets remaining: 57
+Finished routing net _8_
+Nets remaining: 56
+Keeping route for net x[4]
+Finished routing net _9_
+Nets remaining: 54
+Finished routing net \G5.g\
+Nets remaining: 53
+Finished routing net \G5.p\
+Nets remaining: 52
+Finished routing net y[5]
+Nets remaining: 51
+Finished routing net _10_
+Nets remaining: 50
+Finished routing net x[5]
+Nets remaining: 49
+Finished routing net _11_
+Nets remaining: 48
+Finished routing net \G6.p\
+Nets remaining: 47
+Finished routing net \G1.h\
+Nets remaining: 46
+Finished routing net s[0]
+Nets remaining: 45
+Finished routing net \S1.s\
+Nets remaining: 44
+Finished routing net s[1]
+Nets remaining: 43
+Finished routing net \S2.s\
+Nets remaining: 42
+Keeping route for net s[2]
+Finished routing net \S3.s\
+Nets remaining: 40
+Keeping route for net s[3]
+Finished routing net \S4.s\
+Nets remaining: 38
+Finished routing net s[4]
+Nets remaining: 37
+Finished routing net \S5.s\
+Nets remaining: 36
+Finished routing net s[5]
+Nets remaining: 35
+Finished routing net \P5_1.Gij\
+Nets remaining: 34
+Finished routing net s[6]
+Nets remaining: 33
+Keeping route for net _0_
+Finished routing net _1_
+Nets remaining: 31
+Finished routing net \G2.g\
+Nets remaining: 30
+Finished routing net \G2.p\
+Nets remaining: 29
+Finished routing net \G2.h\
+Nets remaining: 28
+Finished routing net \G3.h\
+Nets remaining: 27
+Finished routing net \G4.g\
+Nets remaining: 26
+Finished routing net \G4.h\
+Nets remaining: 25
+Finished routing net \G5.h\
+Nets remaining: 24
+Finished routing net \G6.g\
+Nets remaining: 23
+Keeping route for net \G6.h\
+Keeping route for net _12_
+Keeping route for net _13_
+Keeping route for net _14_
+Finished routing net _15_
+Nets remaining: 18
+Finished routing net \P2.Gij\
+Nets remaining: 17
+Keeping route for net _16_
+Finished routing net _17_
+Nets remaining: 15
+Keeping route for net \P3.Gij\
+Finished routing net \P3.Pij\
+Nets remaining: 13
+Keeping route for net _18_
+Finished routing net _19_
+Nets remaining: 11
+Keeping route for net _20_
+Keeping route for net _21_
+Finished routing net \P4.Gij\
+Nets remaining: 8
+Keeping route for net _22_
+Finished routing net _23_
+Nets remaining: 6
+Keeping route for net \P5.Gij\
+Keeping route for net \P5.Pij\
+Keeping route for net _24_
+Keeping route for net _25_
+
+----------------------------------------------
+Progress: Stage 3 total routes completed: 193
+No failed routes!
+----------------------------------------------
+*** Running stage3 routing with defaults, 2nd round
+Finished routing net \P1.Gij\
+Nets remaining: 77
+Finished routing net \P3_1.Gij\
+Nets remaining: 76
+Finished routing net y[0]
+Nets remaining: 75
+Finished routing net x[0]
+Nets remaining: 74
+Finished routing net \G1.g\
+Nets remaining: 73
+Finished routing net y[1]
+Nets remaining: 72
+Finished routing net _2_
+Nets remaining: 71
+Finished routing net x[1]
+Nets remaining: 70
+Finished routing net _3_
+Nets remaining: 69
+Finished routing net y[2]
+Nets remaining: 68
+Finished routing net _4_
+Nets remaining: 67
+Keeping route for net x[2]
+Finished routing net _5_
+Nets remaining: 65
+Keeping route for net \G3.g\
+Finished routing net \G3.p\
+Nets remaining: 63
+Finished routing net y[3]
+Nets remaining: 62
+Finished routing net _6_
+Nets remaining: 61
+Finished routing net x[3]
+Nets remaining: 60
+Keeping route for net _7_
+Finished routing net \G4.p\
+Nets remaining: 58
+Finished routing net y[4]
+Nets remaining: 57
+Finished routing net _8_
+Nets remaining: 56
+Keeping route for net x[4]
+Finished routing net _9_
+Nets remaining: 54
+Finished routing net \G5.g\
+Nets remaining: 53
+Finished routing net \G5.p\
+Nets remaining: 52
+Finished routing net y[5]
+Nets remaining: 51
+Finished routing net _10_
+Nets remaining: 50
+Finished routing net x[5]
+Nets remaining: 49
+Finished routing net _11_
+Nets remaining: 48
+Finished routing net \G6.p\
+Nets remaining: 47
+Finished routing net \G1.h\
+Nets remaining: 46
+Finished routing net s[0]
+Nets remaining: 45
+Finished routing net \S1.s\
+Nets remaining: 44
+Finished routing net s[1]
+Nets remaining: 43
+Finished routing net \S2.s\
+Nets remaining: 42
+Keeping route for net s[2]
+Finished routing net \S3.s\
+Nets remaining: 40
+Keeping route for net s[3]
+Finished routing net \S4.s\
+Nets remaining: 38
+Finished routing net s[4]
+Nets remaining: 37
+Keeping route for net \S5.s\
+Finished routing net s[5]
+Nets remaining: 35
+Finished routing net \P5_1.Gij\
+Nets remaining: 34
+Finished routing net s[6]
+Nets remaining: 33
+Keeping route for net _0_
+Finished routing net _1_
+Nets remaining: 31
+Finished routing net \G2.g\
+Nets remaining: 30
+Finished routing net \G2.p\
+Nets remaining: 29
+Finished routing net \G2.h\
+Nets remaining: 28
+Finished routing net \G3.h\
+Nets remaining: 27
+Finished routing net \G4.g\
+Nets remaining: 26
+Finished routing net \G4.h\
+Nets remaining: 25
+Finished routing net \G5.h\
+Nets remaining: 24
+Finished routing net \G6.g\
+Nets remaining: 23
+Keeping route for net \G6.h\
+Keeping route for net _12_
+Keeping route for net _13_
+Keeping route for net _14_
+Finished routing net _15_
+Nets remaining: 18
+Finished routing net \P2.Gij\
+Nets remaining: 17
+Keeping route for net _16_
+Finished routing net _17_
+Nets remaining: 15
+Keeping route for net \P3.Gij\
+Finished routing net \P3.Pij\
+Nets remaining: 13
+Keeping route for net _18_
+Finished routing net _19_
+Nets remaining: 11
+Keeping route for net _20_
+Keeping route for net _21_
+Finished routing net \P4.Gij\
+Nets remaining: 8
+Keeping route for net _22_
+Finished routing net _23_
+Nets remaining: 6
+Keeping route for net \P5.Gij\
+Keeping route for net \P5.Pij\
+Keeping route for net _24_
+Keeping route for net _25_
+
+----------------------------------------------
+Progress: Stage 3 total routes completed: 276
+No failed routes!
+----------------------------------------------
+*** Writing DEF file adder_route.def
+emit_routes():  DEF file has 76 nets and 4 specialnets.
+but qrouter wants to write 78 nets and specialnets.
+----------------------------------------------
+Final: No failed routes!
+----------------------------------------------
+*** Writing RC file adder_route.rc
+DEF2Verilog -v /home/kamil/testt/synthesis/adder.rtlnopwr.v -o /home/kamil/testt/synthesis/adder_postroute.v
+-p vdd -g gnd  -l  /usr/local/share/qflow/tech/osu018/osu018_stdcells.lef adder_route.def
+
+Generating RTL verilog and SPICE netlist file in directory
+   /home/kamil/testt/synthesis
+Running vlog2Verilog.
+vlog2Verilog -c -v vdd -g gnd -o adder.rtl.anno.v adder_postroute.v
+vlog2Verilog -c -p -v vdd -g gnd -o adder.rtlnopwr.anno.v adder_postroute.v
+/usr/local/share/qflow/bin/vlog2Verilog -c -b -p -n -v vdd -g gnd -o adder.rtlbb.anno.v adder_postroute.v
+Running vlog2Spice.
+vlog2Spice -i -l  /usr/local/share/qflow/tech/osu018/osu018_stdcells.sp -o adder.anno.spc adder.rtl.anno.v
+Router script ended on pią, 19 cze 2020, 01:43:46 CEST

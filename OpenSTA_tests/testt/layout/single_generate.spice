@@ -1,0 +1,43 @@
+* NGSPICE file created from single_generate.ext - technology: scmos
+
+* Black-box entry subcircuit for FILL abstract view
+.subckt FILL gnd vdd
+.ends
+
+* Black-box entry subcircuit for XOR2X1 abstract view
+.subckt XOR2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for NAND2X1 abstract view
+.subckt NAND2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for NOR2X1 abstract view
+.subckt NOR2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for INVX1 abstract view
+.subckt INVX1 A gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for BUFX2 abstract view
+.subckt BUFX2 A gnd Y vdd
+.ends
+
+.subckt single_generate gnd vdd g h p x y
+XSFILL2040x50 gnd vdd FILL
+XSFILL1000x50 gnd vdd FILL
+XSFILL1880x50 gnd vdd FILL
+X_9_ y x gnd _9_/Y vdd XOR2X1
+X_8_ _8_/A _8_/B gnd _8_/Y vdd NAND2X1
+X_7_ _8_/A _8_/B gnd _7_/Y vdd NOR2X1
+X_5_ y gnd _8_/A vdd INVX1
+X_6_ x gnd _8_/B vdd INVX1
+XSFILL1960x50 gnd vdd FILL
+XSFILL840x50 gnd vdd FILL
+X_12_ _8_/Y gnd p vdd BUFX2
+X_11_ _9_/Y gnd h vdd BUFX2
+X_10_ _7_/Y gnd g vdd BUFX2
+XSFILL920x50 gnd vdd FILL
+.ends
+
